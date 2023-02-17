@@ -1,7 +1,7 @@
 import telebot
 import difflib
 
-bot = telebot.TeleBot("5698245822:AAGSc03FE6i-GKcxiRwoWqb66DPYiPeM1Zg")
+bot = telebot.TeleBot("<token>")
 
 # Define uma função que será chamada quando o usuário enviar a mensagem /start
 @bot.message_handler(commands=['start'])
@@ -19,7 +19,7 @@ def comparar_nomes(message):
         bot.reply_to(message, "Por favor, envie exatamente dois nomes para comparar.")
     else:
         nome1, nome2 = nomes
-        if "pedro" in nomes and "agatha" in nomes:
+        if "João" in nomes and "Maria" in nomes:
             pontuacao = 100
             bot.reply_to(message, "Vocês combinam muito!")
         else:
